@@ -1,0 +1,10 @@
+name             'kimchi'
+maintainer       'Scott Hain'
+maintainer_email 'shain@chef.io'
+license          'Apache 2.0'
+description      'Installs/Configures kimchi'
+long_description 'Installs/Configures kimchi'
+version          '0.0.1'
+
+depends 'yum-epel'
+depends 'runit', '~> 1.6'
