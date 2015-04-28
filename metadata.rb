@@ -9,7 +9,4 @@ version          '0.0.1'
 supports 'centos'
 supports 'ubuntu'
 
-# depends 'yum-epel'
-# depends 'apt'
-depends 'chef-sugar'
 depends 'runit', '~> 1.6'
