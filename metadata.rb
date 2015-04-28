@@ -10,3 +10,4 @@ supports 'centos'
 supports 'ubuntu'
 
 depends 'runit', '~> 1.6'
+depends 'iptables', '~> 0.13.2'

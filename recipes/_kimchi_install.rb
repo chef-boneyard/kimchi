@@ -24,15 +24,17 @@ bash "build_kimchi" do
   notifies :restart, 'runit_service[kimchi]', :delayed
 end
 
-script "setup_iptables" do
-  interpreter "bash"
-  user "root"
-  code <<-EOH
-  iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
-  iptables -A INPUT -p tcp --dport 8001 -j ACCEPT
-  iptables -A INPUT -p tcp --dport 64667 -j ACCEPT
-  EOH
-  not_if ('iptables --list-rules | grep 8000')
-end
+iptables_rule 'kimchi'
+
+# script "setup_iptables" do
+#   interpreter "bash"
+#   user "root"
+#   code <<-EOH
+#   iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+#   iptables -A INPUT -p tcp --dport 8001 -j ACCEPT
+#   iptables -A INPUT -p tcp --dport 64667 -j ACCEPT
+#   EOH
+#   not_if ('iptables --list-rules | grep 8000')
+# end
 
 runit_service 'kimchi'
