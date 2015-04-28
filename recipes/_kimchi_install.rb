@@ -8,7 +8,6 @@ source_path = "#{Chef::Config[:file_cache_path]}/kimchi"
 
 git source_path do
   repository "git://github.com/kimchi-project/kimchi"
-  revision "1.4.1"
   action :sync
   notifies :run, 'script[build_kimchi]', :immediately
 end

@@ -6,5 +6,10 @@ description      'Installs/Configures kimchi'
 long_description 'Installs/Configures kimchi'
 version          '0.0.1'
 
-depends 'yum-epel'
+supports 'centos'
+supports 'ubuntu'
+
+# depends 'yum-epel'
+# depends 'apt'
+depends 'chef-sugar'
 depends 'runit', '~> 1.6'

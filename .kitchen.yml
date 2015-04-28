@@ -1,15 +1,24 @@
 ---
 driver:
   name: vagrant
+  provider: vmware_fusion
+  customize:
+    numvcpus: 2
+    memsize: 2048
+    vhv.enable: "TRUE"
   network:
     # Allow access to kimchi console
     - [forwarded_port, {guest: 8001, host: 8001, auto_correct: false}]
-
+  synced_folders:
+    - ['.', '/home/vagrant/kimchi']
 provisioner:
   name: chef_zero
 
 platforms:
   - name: centos-6.6
+    run_list: yum-epel::default
+  - name: ubuntu-14.04
+    run_list: apt::default
 
 suites:
   - name: default
