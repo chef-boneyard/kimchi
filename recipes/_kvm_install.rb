@@ -8,8 +8,7 @@ package node['kimchi']['packages'] do
   action :install
 end
 
-if node['platform_family'] == 'rhel'
-  service "libvirtd" do
-    action [:enable, :start]
-  end
+service 'libvirtd' do
+  action [:enable, :start]
+  only_if { node['platform_family'] == 'rhel' }
 end
