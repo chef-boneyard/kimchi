@@ -20,7 +20,7 @@ To use for development
 * Run ```bundle install``` from the repo directory
 * Run ```bundle exec kitchen list``` to see OS options
 * Run ```bundle exec kitchen converge <instance_name>``` to spin up a VM
-* kimchi will be running at https://localhost:8001
+* kimchi will be running at https://localhost:8001 - username/password - vagrant/vagrant
 
 Caveats
 -------
