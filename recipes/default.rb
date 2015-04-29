@@ -2,7 +2,7 @@
 # Cookbook Name:: kimchi
 # Recipe:: default
 #
-# Copyright (c) 2015 Scott Hain, All Rights Reserved.
+# Copyright (c) 2015 Chef Software, Inc, All Rights Reserved.
 
 include_recipe 'runit'
 include_recipe 'iptables'

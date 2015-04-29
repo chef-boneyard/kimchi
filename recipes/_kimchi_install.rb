@@ -2,7 +2,7 @@
 # Cookbook Name:: kimchi
 # Recipe:: _kimchi_install
 #
-# Copyright (c) 2015 Scott Hain, All Rights Reserved.
+# Copyright (c) 2015 Chef Software, Inc, All Rights Reserved.
 
 source_path = "#{Chef::Config[:file_cache_path]}/kimchi"
 

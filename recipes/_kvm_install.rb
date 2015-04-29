@@ -2,9 +2,10 @@
 # Cookbook Name:: kimchi
 # Recipe:: _kvm_install
 #
-# Copyright (c) 2015 Scott Hain, All Rights Reserved.
+# Copyright (c) 2015 Chef Software, Inc, All Rights Reserved.
 
-package node['kimchi']['packages'] do
+package 'dependencies' do
+  package_name node['kimchi']['packages']
   action :install
 end
 
