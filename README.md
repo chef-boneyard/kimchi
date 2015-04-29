@@ -9,6 +9,19 @@ The following platforms have been tested:
 * Ubuntu 14.04
 * Centos 6.6
 
+Requirements
+----------------
+* chefdk - https://downloads.chef.io/chef-dk/
+* VMWare Fusion
+
+To use for development
+----------------
+* Clone this repo
+* Run ```bundle install``` from the repo directory
+* Run ```bundle exec kitchen list``` to see OS options
+* Run ```bundle exec kitchen converge <instance_name>``` to spin up a VM
+* kimchi will be running at https://localhost:8001
+
 Caveats
 -------
 Since kimchi is a webui for the KVM hypervisor, this cookbook requires VMWare Fusion or physical hardware to function completely. Virtualbox does not support 'VM within a VM' capabilities (no VT-x passthrough).
