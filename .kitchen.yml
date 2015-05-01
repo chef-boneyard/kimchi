@@ -3,12 +3,14 @@ driver:
   name: vagrant
   provider: vmware_fusion
   customize:
-    numvcpus: 2
-    memsize: 2048
+    numvcpus: 4
+    memsize: 4096
     vhv.enable: "TRUE"
   network:
     # Allow access to kimchi console
+    - [forwarded_port, {guest: 8000, host: 8000, auto_correct: false}]
     - [forwarded_port, {guest: 8001, host: 8001, auto_correct: false}]
+    - [forwarded_port, {guest: 64667, host: 64667, auto_correct: false}]
   synced_folders:
     - ['.', '/home/vagrant/kimchi']
 provisioner:
