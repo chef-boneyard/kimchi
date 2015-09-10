@@ -1,6 +1,9 @@
 Kimchi Cookbook
 =====================
 
+[![Build Status](https://travis-ci.org/chef-cookbooks/kimchi.svg?branch=master)](http://travis-ci.org/chef-cookbooks/kimchi)
+[![Cookbook Version](https://img.shields.io/cookbook/v/kimchi.svg)](https://supermarket.chef.io/cookbooks/kimchi)
+
 The kimchi cookbook is designed to create a testing instance of the kimchi project using test kitchen.
 
 Platform Support
