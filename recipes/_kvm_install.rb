@@ -17,7 +17,6 @@
 # limitations under the License.
 #
 
-
 package 'dependencies' do
   package_name node['kimchi']['packages']
   action :install

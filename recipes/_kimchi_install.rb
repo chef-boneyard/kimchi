@@ -17,7 +17,6 @@
 # limitations under the License.
 #
 
-
 source_path = "#{Chef::Config[:file_cache_path]}/kimchi"
 
 git source_path do
