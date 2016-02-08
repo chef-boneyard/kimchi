@@ -1,37 +1,29 @@
-Kimchi Cookbook
-=====================
-
-[![Build Status](https://travis-ci.org/chef-cookbooks/kimchi.svg?branch=master)](http://travis-ci.org/chef-cookbooks/kimchi)
-[![Cookbook Version](https://img.shields.io/cookbook/v/kimchi.svg)](https://supermarket.chef.io/cookbooks/kimchi)
+# Kimchi Cookbook
+[![Build Status](https://travis-ci.org/chef-cookbooks/kimchi.svg?branch=master)](http://travis-ci.org/chef-cookbooks/kimchi) [![Cookbook Version](https://img.shields.io/cookbook/v/kimchi.svg)](https://supermarket.chef.io/cookbooks/kimchi)
 
 The kimchi cookbook is designed to create a testing instance of the kimchi project using test kitchen.
 
-Platform Support
-----------------
+## Platform Support
 The following platforms have been tested:
-* Ubuntu 14.04
-* Centos 6.6
+- Ubuntu 14.04
+- Centos 6.6
 
-Requirements
-----------------
-* chefdk - https://downloads.chef.io/chef-dk/
-* VMWare Fusion
+## Requirements
+- chefdk - [https://downloads.chef.io/chef-dk/](https://downloads.chef.io/chef-dk/)
+- VMWare Fusion
 
-To use for development
-----------------
-* Clone this repo
-* Run ```bundle install``` from the repo directory
-* Run ```bundle exec kitchen list``` to see OS options
-* Run ```bundle exec kitchen converge <instance_name>``` to spin up a VM
-* kimchi will be running at https://localhost:8001 - username/password - vagrant/vagrant
+## To use for development
+- Clone this repo
+- Run `bundle install` from the repo directory
+- Run `bundle exec kitchen list` to see OS options
+- Run `bundle exec kitchen converge <instance_name>` to spin up a VM
+- kimchi will be running at [https://localhost:8001](https://localhost:8001) - username/password - vagrant/vagrant
 
-Caveats
--------
+## Caveats
 Since kimchi is a webui for the KVM hypervisor, this cookbook requires VMWare Fusion or physical hardware to function completely. Virtualbox does not support 'VM within a VM' capabilities (no VT-x passthrough).
 
-License & Authors
------------------
-- Author:: Scott Hain (<shain@chef.io>)
+## License & Authors
+- Author:: Scott Hain ([shain@chef.io](mailto:shain@chef.io))
 
 ```text
 Copyright:: 2015 Chef Software, Inc

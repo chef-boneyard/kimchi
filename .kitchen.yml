@@ -1,33 +1,27 @@
----
 driver:
   name: vagrant
-  provider: vmware_fusion
-  customize:
-    numvcpus: 4
-    memsize: 4096
-    vhv.enable: "TRUE"
-  network:
-    # Allow access to kimchi console
-    - [forwarded_port, {guest: 8000, host: 8000, auto_correct: false}]
-    - [forwarded_port, {guest: 8001, host: 8001, auto_correct: false}]
-    - [forwarded_port, {guest: 64667, host: 64667, auto_correct: false}]
-  synced_folders:
-    - ['.', '/home/vagrant/kimchi']
+
 provisioner:
   name: chef_zero
 
 platforms:
+  - name: centos-5.11
   - name: centos-6.7
-  - name: centos-7.1
+  - name: centos-7.2
+  - name: debian-7.9
+    run_list: apt::default
+  - name: debian-8.2
+    run_list: apt::default
+  - name: fedora-22
+    run_list: yum::dnf_yum_compat
+  - name: fedora-23
+    run_list: yum::dnf_yum_compat
   - name: ubuntu-12.04
-    run_list:
-      - recipe[apt::default]
+    run_list: apt::default
   - name: ubuntu-14.04
-    run_list:
-      - recipe[apt::default]
+    run_list: apt::default
 
 suites:
   - name: default
     run_list:
       - recipe[kimchi::default]
-    attributes:
