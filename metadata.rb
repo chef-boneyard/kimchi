@@ -7,6 +7,11 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '1.0.0'
 
 supports 'centos'
+supports 'amazon'
+supports 'scientific'
+supports 'redhat'
+supports 'oracle'
+supports 'debian'
 supports 'ubuntu'
 
 depends 'runit', '~> 1.6'
