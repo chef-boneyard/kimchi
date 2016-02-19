@@ -24,8 +24,7 @@ describe 'kimchi::default' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new(
         platform: 'centos',
-        version: '6.6',
-        file_cache_path: '/var/chef/cache'
+        version: '6.6'
       )
       runner.converge(described_recipe)
     end
@@ -57,8 +56,7 @@ describe 'kimchi::default' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new(
         platform: 'ubuntu',
-        version: '14.04',
-        file_cache_path: '/var/chef/cache'
+        version: '14.04'
       )
       runner.converge(described_recipe)
     end
