@@ -4,7 +4,7 @@ maintainer_email 'shain@chef.io'
 license 'Apache 2.0'
 description 'Installs and onfigures kimchi, the kvm graphical interface'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '1.0.0'
+version '1.0.1'
 
 supports 'centos'
 supports 'amazon'
