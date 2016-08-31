@@ -14,8 +14,10 @@ supports 'oracle'
 supports 'debian'
 supports 'ubuntu'
 
-depends 'runit', '~> 1.6'
+depends 'runit', '>= 1.6'
 depends 'iptables'
 
 source_url 'https://github.com/chef-cookbooks/kimchi' if respond_to?(:source_url)
 issues_url 'https://github.com/chef-cookbooks/kimchi/issues' if respond_to?(:issues_url)
+
+chef_version '>= 11' if respond_to?(:chef_version)
