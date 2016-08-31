@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the kimchi cookbook.
 
+## 1.0.2 (2016-08-30)
+
+- Loosen runit pin
+- Update maintainers
+
 ## 1.0.1 (2016-08-30)
 
 - Update kitchen.yml with ports and better defaults
