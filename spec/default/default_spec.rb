@@ -2,7 +2,7 @@
 # Cookbook Name:: kimchi
 # Spec:: default
 #
-# Copyright 2015, Chef Software, Inc.
+# Copyright 2015-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ describe 'kimchi::default' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new(
         platform: 'centos',
-        version: '6.6'
+        version: '6.7'
       )
       runner.converge(described_recipe)
     end
@@ -40,7 +40,7 @@ describe 'kimchi::default' do
     end
 
     it 'syncs a git with attributes' do
-      expect(chef_run).to sync_git('/var/chef/cache/kimchi').with(repository: 'git://github.com/kimchi-project/kimchi')
+      expect(chef_run).to sync_git("#{Chef::Config[:file_cache_path]}/kimchi").with(repository: 'git://github.com/kimchi-project/kimchi')
     end
 
     it 'builds kimchi via bash script' do
@@ -66,7 +66,7 @@ describe 'kimchi::default' do
     end
 
     it 'syncs a git with attributes' do
-      expect(chef_run).to sync_git('/var/chef/cache/kimchi').with(repository: 'git://github.com/kimchi-project/kimchi')
+      expect(chef_run).to sync_git("#{Chef::Config[:file_cache_path]}/kimchi").with(repository: 'git://github.com/kimchi-project/kimchi')
     end
 
     it 'enables runit kimchi service' do
